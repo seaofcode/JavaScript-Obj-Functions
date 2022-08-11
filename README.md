@@ -15,7 +15,7 @@ age: 33,\
 married: false,\
 siblings:['hanna', 'geno'],\
 sayHello(name){\
-console.log(/"Hello, my name is ${name/"});\
+console.log(\"Hello, my name is ${name\"});\
 },\
 };
 
