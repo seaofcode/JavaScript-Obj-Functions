@@ -48,4 +48,40 @@
 // // if nothing is invoked left of the dot, the window object is called
 // showThis();
 
+// ******************************
+
+// Blue Print
+// Factory Functions and Constructor Functions
+
+// Factory Function
+function createPerson(firstName, lastName) {
+    return {
+        firstName: firstName,
+        lastName: lastName,
+        fullName: function() {
+            console.log(`My full name is ${this.firstName} ${this.lastName}`);
+        },
+    };
+};
+
+const gary = createPerson('gary','gygax');
+gary.fullName();
+const bob = createPerson('bob','evans');
+bob.fullName();
+const dan = createPerson('dan','max');
+dan.fullName();
+
+
+// Constructor Function
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.fullName = function() {
+        console.log(`My full name is ${this.firstName} ${this.lastName}`);
+    };
+}
+
+const john = new Person('john', 'daily');
+john.fullName();
+
 
