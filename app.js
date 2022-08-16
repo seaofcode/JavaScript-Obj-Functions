@@ -54,34 +54,67 @@
 // Factory Functions and Constructor Functions
 
 // Factory Function
-function createPerson(firstName, lastName) {
-    return {
-        firstName: firstName,
-        lastName: lastName,
-        fullName: function() {
-            console.log(`My full name is ${this.firstName} ${this.lastName}`);
-        },
-    };
-};
+// function createPerson(firstName, lastName) {
+//     return {
+//         firstName: firstName,
+//         lastName: lastName,
+//         fullName: function() {
+//             console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//         },
+//     };
+// };
 
-const gary = createPerson('gary','gygax');
-gary.fullName();
-const bob = createPerson('bob','evans');
-bob.fullName();
-const dan = createPerson('dan','max');
-dan.fullName();
+// const gary = createPerson('gary','gygax');
+// gary.fullName();
+// const bob = createPerson('bob','evans');
+// bob.fullName();
+// const dan = createPerson('dan','max');
+// dan.fullName();
 
 
-// Constructor Function
-function Person(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.fullName = function() {
-        console.log(`My full name is ${this.firstName} ${this.lastName}`);
-    };
-}
+// // Constructor Function
+// function Person(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.fullName = function() {
+//         console.log(`My full name is ${this.firstName} ${this.lastName}`);
+//     };
+// }
 
-const john = new Person('john', 'daily');
-john.fullName();
+// const john = new Person('john', 'daily');
+// john.fullName();
+
+
+// ****************************************
+
+/* 
+    Prototypal Inheritance Model
+    Javascript uses prototypal inheritance model. That means that
+    every constructor function/class has a prototype property that is
+    shared by every instance of the constructor/class. So any properties
+    and methods or prototype can be acessed by every instance, prototype
+    property returns an object
+*/
+
+// function Account(name, initialBalance) {
+//     this.name = name;
+//     this.initialBalance = initialBalance;
+// }
+
+// const john = new Account('john', 300);
+// const bob = new Account('bob', 200);
+
+// console.log(Account.prototype);
+
+// Account.prototype.bank = 'CHASE';
+// Account.prototype.deposit = function(amount) {
+//         this.initialBalance += amount;
+//         console.log(`Hello ${this.name}, your balance is ${this.initialBalance}`);
+//     };
+
+// console.log(john.bank);
+// console.log(bob);
+
+// john.deposit(300);
 
 
