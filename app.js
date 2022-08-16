@@ -118,3 +118,42 @@
 // john.deposit(300);
 
 
+// ES6 Class Syntax
+// class Account {
+//     constructor(name, initialBalance){
+//         this.name = name;
+//         this.initialBalance = initialBalance;
+//     }
+//     bank = 'CHASE';
+//     deposit(amount){
+//         this.initialBalance += amount;
+//         console.log(`Hello ${this.name}, your balance is ${this.initialBalance}`);
+//     }
+// }
+
+// const john = new Account('john', 0);
+// console.log(john);
+// console.log(john.name);
+// john.deposit(500);
+// console.log(john.bank);
+
+
+// call - runs instantly, arguments - list of items
+
+// const john = {
+//     name: 'john',
+//     age: 22,
+//     greet: function(){
+//         console.log(this);
+//         console.log(`Hello I am ${this.name} and I am ${this.age} years old`);
+//     }
+
+// } 
+// const sue = {
+//     name: 'sue',
+//     age: 28,
+// } 
+
+// john.greet.call(sue);
+
+
